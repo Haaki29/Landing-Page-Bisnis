@@ -31,24 +31,6 @@
             overflow-x: hidden;
         }
 
-        /* Custom Cursor */
-        .cursor {
-            width: 20px;
-            height: 20px;
-            border: 2px solid var(--white);
-            border-radius: 50%;
-            position: fixed;
-            pointer-events: none;
-            z-index: 99999;
-            transition: transform 0.15s ease, background 0.15s ease;
-            mix-blend-mode: difference;
-        }
-
-        .cursor.active {
-            transform: scale(2.5);
-            background: rgba(255,255,255,0.1);
-        }
-
         /* Preloader */
         .preloader {
             position: fixed;
@@ -1238,8 +1220,185 @@
                 text-align: center;
             }
 
-            .cursor {
+            /* Tambahan responsif HP */
+            .about-image img {
+                height: 320px;
+            }
+
+            .carousel-image-wrapper img {
+                height: 320px;
+            }
+
+            .product-card-image {
+                height: 280px;
+            }
+
+            .float-element {
                 display: none;
+            }
+
+            .hero-logo-container svg {
+                width: 90px;
+                height: 90px;
+            }
+
+            .nav-logo-text {
+                font-size: 1.5rem;
+            }
+
+            .about-stats {
+                gap: 1rem;
+            }
+
+            .stat-number {
+                font-size: 1.8rem;
+            }
+
+            .carousel-controls {
+                gap: 1rem;
+            }
+
+            .carousel-info h3 {
+                font-size: 2.2rem;
+            }
+
+            .features-grid {
+                gap: 1.5rem;
+            }
+
+            .btn-primary, .btn-secondary {
+                padding: 0.9rem 2rem;
+                font-size: 0.8rem;
+            }
+
+            .newsletter h2 {
+                font-size: 2.4rem;
+            }
+        }
+
+        /* Tambahan: Responsif untuk layar HP kecil */
+        @media (max-width: 480px) {
+            .navbar {
+                padding: 0.8rem 1.2rem;
+            }
+
+            .hero-title {
+                font-size: clamp(2.5rem, 15vw, 4rem);
+                letter-spacing: 0.4rem;
+            }
+
+            .hero-subtitle {
+                font-size: 0.75rem;
+                letter-spacing: 0.2rem;
+                margin-bottom: 2rem;
+            }
+
+            .hero-cta-group {
+                width: 100%;
+                padding: 0 1.5rem;
+                gap: 1rem;
+            }
+
+            .btn-primary, .btn-secondary {
+                width: 100%;
+                text-align: center;
+                padding: 0.9rem 1.5rem;
+            }
+
+            .section {
+                padding: 3.5rem 1.2rem;
+            }
+
+            .section-title {
+                font-size: clamp(2rem, 10vw, 3rem);
+            }
+
+            .section-header {
+                margin-bottom: 3rem;
+            }
+
+            .about-image img {
+                height: 260px;
+            }
+
+            .about-text h3 {
+                font-size: 2.2rem;
+            }
+
+            .about-stats {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 0.5rem;
+            }
+
+            .stat-number {
+                font-size: 1.4rem;
+            }
+
+            .stat-label {
+                font-size: 0.6rem;
+            }
+
+            .carousel-image-wrapper img {
+                height: 240px;
+            }
+
+            .carousel-info h3 {
+                font-size: 1.8rem;
+            }
+
+            .carousel-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+
+            .carousel-dot {
+                width: 20px;
+            }
+
+            .carousel-dot.active {
+                width: 35px;
+            }
+
+            .product-card-image {
+                height: 240px;
+            }
+
+            .product-card-name {
+                font-size: 1.2rem;
+            }
+
+            .feature-item {
+                padding: 2rem 1.2rem;
+            }
+
+            .footer {
+                padding: 3rem 1.2rem 1.5rem;
+            }
+
+            .footer-social a {
+                width: 35px;
+                height: 35px;
+            }
+
+            .newsletter h2 {
+                font-size: 2rem;
+            }
+
+            .newsletter-form button {
+                padding: 1rem;
+            }
+
+            .marquee-track span {
+                font-size: 1rem;
+                padding: 0 1.5rem;
+            }
+
+            .back-to-top {
+                width: 42px;
+                height: 42px;
+                bottom: 1.2rem;
+                right: 1.2rem;
             }
         }
 
@@ -1281,9 +1440,6 @@
     </style>
 </head>
 <body>
-
-    <!-- Custom Cursor -->
-    <div class="cursor" id="cursor"></div>
 
     <!-- Preloader -->
     <div class="preloader" id="preloader">
@@ -1435,7 +1591,7 @@
 <section class="section about" id="about">
     <div class="about-grid">
         <div class="about-image reveal">
-            <img src="C:\Users\abdlr\Downloads\Pelatihan\Digital Marketing AI\Landing Page 2.jpeg" alt="SHIFT Shoes">
+            <img src="Landing Page 2.JPEG" alt="SHIFT Shoes">
         </div>
         <div class="about-text reveal">
             <span class="section-label" style="color: var(--black);">Our Story</span>
@@ -1495,7 +1651,7 @@
             <div class="carousel-slide">
                 <div class="carousel-slide-content">
                     <div class="carousel-image-wrapper">
-                        <img src="C:\Users\abdlr\Downloads\Pelatihan\Digital Marketing AI\Catalog\Air Force\Low Air Force White\SHIFT Air Force 1 WB - Samping.jpeg" alt="SHIFT Low White">
+                        <img src="SHIFT Air Force 1 WB - Samping.JPEG" alt="SHIFT Low White">
                     </div>
                     <div class="carousel-info">
                         <span class="section-label" style="text-align:left;">01 / Low </span>
@@ -1510,7 +1666,7 @@
             <div class="carousel-slide">
                 <div class="carousel-slide-content">
                     <div class="carousel-image-wrapper">
-                        <img src="C:\Users\abdlr\Downloads\Pelatihan\Digital Marketing AI\Catalog\Air Force\Low Air Force Black\Air Force 1 BS - Samping.jpeg" alt="SHIFT Low Black">
+                        <img src="Air Force 1 BS - Samping.JPEG" alt="SHIFT Low Black">
                     </div>
                     <div class="carousel-info">
                         <span class="section-label" style="text-align:left;">02 / Low </span>
@@ -1525,7 +1681,7 @@
             <div class="carousel-slide">
                 <div class="carousel-slide-content">
                     <div class="carousel-image-wrapper">
-                        <img src="C:\Users\abdlr\Downloads\Pelatihan\Digital Marketing AI\Catalog\Air Force\Low Air Force 1 WR\SHIFT Air Force 1 WR - Samping.jpeg" alt="SHIFT High White">
+                        <img src="SHIFT Air Force 1 WR - Samping.JPEG" alt="SHIFT High White">
                     </div>
                     <div class="carousel-info">
                         <span class="section-label" style="text-align:left;">03 / Low </span>
@@ -1563,7 +1719,7 @@
             <a href="https://lynk.id/rvvzck/pj3wyj88w332" target="_blank" class="product-card-link">
                 <div class="product-card reveal">
                     <div class="product-card-image">
-                        <img src="C:\Users\abdlr\Downloads\Pelatihan\Digital Marketing AI\Catalog\Air Force\Low Air Force White\SHIFT Air Force 1 WB.jpeg" alt="SHIFT Low White">
+                        <img src="SHIFT Air Force 1 WB.JPEG" alt="SHIFT Low White">
                         <div class="product-card-badge">Best</div>
                         <button class="product-card-wishlist">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1590,7 +1746,7 @@
             <a href="https://lynk.id/rvvzck/jykvryknj9kg" target="_blank" class="product-card-link">
                 <div class="product-card reveal">
                     <div class="product-card-image">
-                        <img src="C:\Users\abdlr\Downloads\Pelatihan\Digital Marketing AI\Catalog\Air Force\Low Air Force Black\Air Force 1 BS - kiri.jpeg" alt="SHIFT Low Black">
+                        <img src="Air Force 1 BS - Kiri.JPEG" alt="SHIFT Low Black">
                         <div class="product-card-badge">New</div>
                         <button class="product-card-wishlist">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1617,7 +1773,7 @@
             <a href="https://lynk.id/rvvzck/6mj2yon8no0g" target="_blank" class="product-card-link">
                 <div class="product-card reveal">
                     <div class="product-card-image">
-                        <img src="C:\Users\abdlr\Downloads\Pelatihan\Digital Marketing AI\Catalog\Air Force\Low Air Force 1 WR\SHIFT Air Force 1 WR.jpeg" alt="SHIFT High White">
+                        <img src="SHIFT Air Force 1 WR.JPEG" alt="SHIFT High White">
                         <div class="product-card-badge">Premium</div>
                         <button class="product-card-wishlist">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1749,18 +1905,6 @@
             setTimeout(() => {
                 document.getElementById('preloader').classList.add('hidden');
             }, 1500);
-        });
-
-        // Custom Cursor
-        const cursor = document.getElementById('cursor');
-        document.addEventListener('mousemove', (e) => {
-            cursor.style.left = e.clientX - 10 + 'px';
-            cursor.style.top = e.clientY - 10 + 'px';
-        });
-
-        document.querySelectorAll('a, button, .product-card').forEach(el => {
-            el.addEventListener('mouseenter', () => cursor.classList.add('active'));
-            el.addEventListener('mouseleave', () => cursor.classList.remove('active'));
         });
 
         // Navbar Scroll Effect
